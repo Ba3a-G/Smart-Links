@@ -6,6 +6,9 @@ When contributing to this repository, please first discuss the change you wish t
 
 Also, please go through the [legal jibber jabber](#code-of-conduct) before interacting with our project.
 
+## Goal 🎯
+To make a full fledged smart URL shortener.
+
 ## How to contribute❓
 1. Fork the repository
 2. Make a new branch
