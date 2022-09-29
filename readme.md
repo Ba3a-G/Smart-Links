@@ -7,9 +7,9 @@ Links that open directly in app using intents for Android and iOS. For example, 
 `git clone "https://github.com/ba3a-g/smart-links"`
 ```python
 # In project directory
-from smartlinks import Intents
-intents = Intent("https://twitter.com/ba3a_gamzo")
-intents.getIntents()
+from smartlinks import Intent
+generator = Intent("https://twitter.com/ba3a_gamzo")
+generator.getIntents()
 ```
 ```json
 {
