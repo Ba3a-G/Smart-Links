@@ -15,4 +15,12 @@ class Intent():
             self.parser = getattr(parsers, general)
 
     def getIntents(self):
-        return self.parser(self.url)
+        try:
+            intents = self.parser(self.url)
+        except:
+            intents = {
+                "web": self.url,
+                "android": self.url,
+                "ios": self.url
+            }
+        return intents
