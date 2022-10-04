@@ -18,5 +18,9 @@ class Intent():
         try:
             intents = self.parser(self.url)
         except:
-            pass
+            intents = {
+                "web": self.url,
+                "android": self.url,
+                "ios": self.url
+            }
         return intents
