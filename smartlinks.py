@@ -15,4 +15,8 @@ class Intent():
             self.parser = getattr(parsers, general)
 
     def getIntents(self):
-        return self.parser(self.url)
+        try:
+            intents = self.parser(self.url)
+        except:
+            pass
+        return intents
