@@ -1,4 +1,4 @@
-import importlib
+import parsers
 
 class Intent():
 
@@ -10,11 +10,9 @@ class Intent():
 
         # import parser module
         try:
-            self.parser = importlib.import_module(f".{self.service}", package="parsers")
+            self.parser = getattr(parsers, self.service)
         except:
-            print("importing general module")
-            self.parser = importlib.import_module(".general", package="parsers")
+            self.parser = getattr(parsers, general)
 
     def getIntents(self):
-        intents = self.parser.createIntents(self.url)
-        return {"web": intents.intentWeb, "android": intents.intentAndroid, "ios": intents.intentIOS}
+        return self.parser(self.url)
