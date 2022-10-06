@@ -28,7 +28,10 @@ def snapchat(link):
 def messenger(link):
     m = (re.search(r"messenger.com\/t\/[\d\.]+", link)).group(0)
     return {"web": m, "android": f"intent://user/{m[16:]}/#Intent;package=com.facebook.orca;scheme=fb-messenger;end", "ios": f"fb-messenger-public://user-thread/{m[16:]}"}
-
+def tiktok(link):
+    #Tiktok Videos
+    m = (re.search(r"tiktok.com/[\w\-\/]+", link)).group(0)
+    return {"web": m, "android": f"snssdk1233://webview?url={m}", "ios": f"snssdk1233://webview?url={m}"}
 
 
 #return {"web": m, "android": f"", "ios": f""}
