@@ -233,7 +233,7 @@ header
   top: 0px;
   left: 0px;
   right: 0px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)!important;
 }
 
 .background-header .logo,
@@ -617,7 +617,7 @@ header
     width: 100%;
   }
   .header-area {
-    background-color: black;
+    background-color:#0f0e17;
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
