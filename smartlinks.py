@@ -12,14 +12,12 @@ class Intent():
         try:
             self.parser = getattr(parsers, self.service)
         except:
-            # No parser found
             self.parser = getattr(parsers, general)
 
     def getIntents(self):
         try:
             intents = self.parser(self.url)
         except:
-            # Some error occured
             intents = {
                 "web": self.url,
                 "android": self.url,
